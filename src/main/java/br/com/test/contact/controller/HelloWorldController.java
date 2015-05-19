@@ -1,4 +1,4 @@
-package net.viralpatel.contact.controller;
+package br.com.test.contact.controller;
 
 import java.util.Map;
 

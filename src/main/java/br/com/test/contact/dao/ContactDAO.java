@@ -1,8 +1,8 @@
-package net.viralpatel.contact.dao;
+package br.com.test.contact.dao;
 
 import java.util.List;
 
-import net.viralpatel.contact.form.Contact;
+import br.com.test.contact.domain.Contact;
 
 public interface ContactDAO {
 	

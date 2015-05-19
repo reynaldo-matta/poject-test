@@ -7,7 +7,7 @@
 <hibernate-configuration>
     <session-factory>
 		<property name="hibernate.hbm2ddl.auto">update</property>   
-        <mapping class="net.viralpatel.contact.form.Contact" />
+        <mapping class="br.com.test.contact.domain.Contact" />
     </session-factory>
 	    
 </hibernate-configuration>

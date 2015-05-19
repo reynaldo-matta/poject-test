@@ -1,8 +1,8 @@
-package net.viralpatel.contact.service;
+package br.com.test.contact.service;
 
 import java.util.List;
 
-import net.viralpatel.contact.form.Contact;
+import br.com.test.contact.domain.Contact;
 
 public interface ContactService {
 	

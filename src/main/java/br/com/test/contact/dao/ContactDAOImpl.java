@@ -1,8 +1,8 @@
-package net.viralpatel.contact.dao;
+package br.com.test.contact.dao;
 
 import java.util.List;
 
-import net.viralpatel.contact.form.Contact;
+import br.com.test.contact.domain.Contact;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,6 @@ public class ContactDAOImpl implements ContactDAO {
 
 	@SuppressWarnings("unchecked")
 	public List<Contact> listContact() {
-
 		return sessionFactory.getCurrentSession().createQuery("from Contact")
 				.list();
 	}

@@ -1,16 +1,15 @@
-package net.viralpatel.contact.controller;
+package br.com.test.contact.controller;
 
 import java.util.Map;
 
 import javax.validation.Valid;
 
-import net.viralpatel.contact.form.Contact;
-import net.viralpatel.contact.service.ContactService;
+import br.com.test.contact.domain.Contact;
+import br.com.test.contact.service.ContactService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -31,7 +30,7 @@ public class ContactController {
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String addContact(@ModelAttribute("contact") @Valid Contact contact, BindingResult result) {
+	public String addContact(@Valid Contact contact, BindingResult result) {
 
 		if(result.hasErrors()){
 			return "redirect:/index";

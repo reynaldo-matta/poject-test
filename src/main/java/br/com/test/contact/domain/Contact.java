@@ -1,13 +1,13 @@
-package net.viralpatel.contact.form;
+package br.com.test.contact.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.Range;
 
 @Entity
 @Table(name="CONTACTS")
@@ -21,21 +21,24 @@ public class Contact {
 	@GeneratedValue
 	private Integer id;
 	
-	@Column(name="FIRSTNAME")
+	@Column(name="FIRSTNAME", nullable = false)
 	@NotEmpty(message="Necessário informar o primeiro nome.")
+    @Range(min=2, max=50, message="Necessário informar o primeiro nome.")
 	private String firstname;
 
-	@Column(name="LASTNAME")
+	@Column(name="LASTNAME", nullable = false)
 	@NotEmpty(message="Necessário informar o último nome.")
+    @Range(min=2, max=80, message="Necessário informar o último nome.")
 	private String lastname;
 
-	@Column(name="EMAIL")
+	@Column(name="EMAIL", nullable = false)
 	@NotEmpty(message="Necessário informar o e-mail.")
+    @Range(min=2, max=100, message="Necessário informar o e-mail.")
 	private String email;
 	
-	@Column(name="TELEPHONE")
+	@Column(name="TELEPHONE", nullable = false)
 	@NotEmpty(message="Necessário informar o Telefone.")
-	@Size(min=10, max=10, message="O Tamanho permitido é de 10.")
+	@Range(min=16, max=16, message="O Tamanho permitido é de 10.")
 	private String telephone;
 
 	public Integer getId() {

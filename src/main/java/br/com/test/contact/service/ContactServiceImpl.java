@@ -1,4 +1,4 @@
-package net.viralpatel.contact.service;
+package br.com.test.contact.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import net.viralpatel.contact.dao.ContactDAO;
-import net.viralpatel.contact.form.Contact;
+import br.com.test.contact.dao.ContactDAO;
+import br.com.test.contact.domain.Contact;
 
 @Service
 public class ContactServiceImpl implements ContactService {
