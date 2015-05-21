@@ -1,6 +1,5 @@
 package br.com.test.contact.service;
 
-import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +13,7 @@ import org.mockito.Mockito;
 public class ContactServiceImplTest {
 
 	private ContactDAO contactDAO;
-    private List<Contact> contacts = new ArrayList<Contact>();
+    private final List<Contact> contacts = new ArrayList<Contact>();
 
     @Before
     public void init(){
